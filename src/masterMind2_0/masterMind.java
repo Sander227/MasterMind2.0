@@ -1,23 +1,21 @@
 
-package masterMind;
+package masterMind2_0;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class masterMind {
 
 	public static void main(String[] args) {
+		
+		Random random = new Random();
+		
+		String[] kleuren = {"rood", "oranje", "geel", "groen", "blauw", "paars"};
 
-		String rood = "rood";
-		String geel = "geel";
-		String groen = "groen";
-		String blauw = "blauw";
-		String paars = "paars";
-		String oranje = "oranje";
-
-		String code1 = oranje;
-		String code2 = groen;
-		String code3 = blauw;
-		String code4 = paars;
+		String [] codes = new String[4];
+		codes[0] = kleuren[random.nextInt(kleuren.length)];
+		codes[1] = kleuren[random.nextInt(kleuren.length)];
+		codes[2] = kleuren[random.nextInt(kleuren.length)];
+		codes[3] = kleuren[random.nextInt(kleuren.length)];
 
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Welkom bij MasterMind");
@@ -30,54 +28,55 @@ public class masterMind {
 		while (ronde < 10) {
 
 			System.out.println("Gok " + teller);
-			String mastermind1_1 = sc.next();
-			String mastermind1_2 = sc.next();
-			String mastermind1_3 = sc.next();
-			String mastermind1_4 = sc.next();
+			String [] inputs = new String[4];
+			inputs[0] = sc.next();
+			inputs[1] = sc.next();
+			inputs[2] = sc.next();
+			inputs[3] = sc.next();
 
-			if (mastermind1_1.equals(code1)) {
+			if (inputs[0].equals(codes[0])) {
 				System.out.print("Zwart ");
-			} else if (mastermind1_1.equals(code2)) {
+			} else if (inputs[0].equals(codes[1])) {
 				System.out.print("Wit ");
-			} else if (mastermind1_1.equals(code3)) {
+			} else if (inputs[0].equals(codes[2])) {
 				System.out.print("Wit ");
-			} else if (mastermind1_1.equals(code4)) {
+			} else if (inputs[0].equals(codes[3])) {
 				System.out.print("Wit ");
 			} else {
 				System.out.print("- ");
 			}
 
-			if (mastermind1_2.equals(code2)) {
+			if (inputs[1].equals(codes[1])) {
 				System.out.print("Zwart ");
-			} else if (mastermind1_2.equals(code1)) {
+			} else if (inputs[1].equals(codes[0])) {
 				System.out.print("Wit ");
-			} else if (mastermind1_2.equals(code3)) {
+			} else if (inputs[1].equals(codes[2])) {
 				System.out.print("Wit ");
-			} else if (mastermind1_2.equals(code4)) {
+			} else if (inputs[1].equals(codes[3])) {
 				System.out.print("Wit ");
 			} else {
 				System.out.print("- ");
 			}
 
-			if (mastermind1_3.equals(code3)) {
+			if (inputs[2].equals(codes[2])) {
 				System.out.print("Zwart ");
-			} else if (mastermind1_3.equals(code1)) {
+			} else if (inputs[2].equals(codes[0])) {
 				System.out.print("Wit ");
-			} else if (mastermind1_3.equals(code2)) {
+			} else if (inputs[2].equals(codes[1])) {
 				System.out.print("Wit ");
-			} else if (mastermind1_3.equals(code4)) {
+			} else if (inputs[2].equals(codes[3])) {
 				System.out.print("Wit ");
 			} else {
 				System.out.print("- ");
 			}
 
-			if (mastermind1_4.equals(code4)) {
+			if (inputs[3].equals(codes[3])) {
 				System.out.println("Zwart ");
-			} else if (mastermind1_4.equals(code1)) {
+			} else if (inputs[3].equals(codes[0])) {
 				System.out.println("Wit ");
-			} else if (mastermind1_4.equals(code2)) {
+			} else if (inputs[3].equals(codes[1])) {
 				System.out.println("Wit ");
-			} else if (mastermind1_4.equals(code3)) {
+			} else if (inputs[3].equals(codes[2])) {
 				System.out.println("Wit ");
 			} else {
 				System.out.println("- ");
@@ -85,13 +84,13 @@ public class masterMind {
 			ronde++;
 			teller++;
 
-			if (mastermind1_1.equals(code1)) {
+			if (inputs[0].equals(codes[0])) {
 
-				if (mastermind1_2.equals(code2)) {
+				if (inputs[1].equals(codes[1])) {
 
-					if (mastermind1_3.equals(code3)) {
+					if (inputs[2].equals(codes[2])) {
 
-						if (mastermind1_4.equals(code4)) {
+						if (inputs[3].equals(codes[3])) {
 
 							System.out.println("Je hebt gewonnen geluksbal, volgende keer verlies je");
 							break;
