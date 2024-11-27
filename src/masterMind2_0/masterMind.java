@@ -1,5 +1,5 @@
 
-package masterMind;
+package masterMind2_0;
 
 import java.util.*;
 
@@ -12,10 +12,9 @@ public class masterMind {
 		String[] kleuren = {"rood", "oranje", "geel", "groen", "blauw", "paars"};
 
 		String [] codes = new String[4];
-		codes[0] = kleuren[random.nextInt(kleuren.length)];
-		codes[1] = kleuren[random.nextInt(kleuren.length)];
-		codes[2] = kleuren[random.nextInt(kleuren.length)];
-		codes[3] = kleuren[random.nextInt(kleuren.length)];
+		for (int x = 0; x < codes.length; x++) {
+			codes[x] = kleuren[random.nextInt(kleuren.length)];
+		}
 
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Welkom bij MasterMind");
@@ -29,10 +28,9 @@ public class masterMind {
 
 			System.out.println("Gok " + teller);
 			String [] inputs = new String[4];
-			inputs[0] = sc.next();
-			inputs[1] = sc.next();
-			inputs[2] = sc.next();
-			inputs[3] = sc.next();
+			for (int x = 0; x < inputs.length; x++) {
+				inputs[x] = sc.next();
+			}
 
 			if (inputs[0].equals(codes[0])) {
 				System.out.print("Zwart ");
