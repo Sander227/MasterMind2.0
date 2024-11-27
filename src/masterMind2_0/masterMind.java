@@ -1,5 +1,5 @@
 
-package masterMind2_0;
+package masterMind;
 
 import java.util.*;
 
@@ -101,7 +101,7 @@ public class masterMind {
 			}
 			
 			if (ronde==10){
-				System.out.println("Ik wist wel dat je ging verliezen, volgende keer beter");
+				System.out.println("Ik wist wel dat je ging verliezen, volgende keer beter.");
 			}
 
 			
