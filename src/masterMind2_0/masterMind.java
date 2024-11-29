@@ -34,11 +34,7 @@ public class masterMind {
 
 			if (inputs[0].equals(codes[0])) {
 				System.out.print("Zwart ");
-			} else if (inputs[0].equals(codes[1])) {
-				System.out.print("Wit ");
-			} else if (inputs[0].equals(codes[2])) {
-				System.out.print("Wit ");
-			} else if (inputs[0].equals(codes[3])) {
+			} else if (inputs[0].equals(codes[1])|| inputs[0].equals(codes[2]) || inputs[0].equals(codes[3])) {
 				System.out.print("Wit ");
 			} else {
 				System.out.print("- ");
@@ -46,11 +42,7 @@ public class masterMind {
 
 			if (inputs[1].equals(codes[1])) {
 				System.out.print("Zwart ");
-			} else if (inputs[1].equals(codes[0])) {
-				System.out.print("Wit ");
-			} else if (inputs[1].equals(codes[2])) {
-				System.out.print("Wit ");
-			} else if (inputs[1].equals(codes[3])) {
+			} else if (inputs[1].equals(codes[0]) || inputs[1].equals(codes[2]) || inputs[1].equals(codes[3])) {
 				System.out.print("Wit ");
 			} else {
 				System.out.print("- ");
@@ -58,11 +50,7 @@ public class masterMind {
 
 			if (inputs[2].equals(codes[2])) {
 				System.out.print("Zwart ");
-			} else if (inputs[2].equals(codes[0])) {
-				System.out.print("Wit ");
-			} else if (inputs[2].equals(codes[1])) {
-				System.out.print("Wit ");
-			} else if (inputs[2].equals(codes[3])) {
+			} else if (inputs[2].equals(codes[0]) || inputs[2].equals(codes[1]) || inputs[2].equals(codes[3])) {
 				System.out.print("Wit ");
 			} else {
 				System.out.print("- ");
@@ -70,40 +58,24 @@ public class masterMind {
 
 			if (inputs[3].equals(codes[3])) {
 				System.out.println("Zwart ");
-			} else if (inputs[3].equals(codes[0])) {
-				System.out.println("Wit ");
-			} else if (inputs[3].equals(codes[1])) {
-				System.out.println("Wit ");
-			} else if (inputs[3].equals(codes[2])) {
+			} else if (inputs[3].equals(codes[0]) || inputs[3].equals(codes[1]) || inputs[3].equals(codes[2]))  {
 				System.out.println("Wit ");
 			} else {
 				System.out.println("- ");
 			}
+			
 			ronde++;
 			teller++;
 
-			if (inputs[0].equals(codes[0])) {
-
-				if (inputs[1].equals(codes[1])) {
-
-					if (inputs[2].equals(codes[2])) {
-
-						if (inputs[3].equals(codes[3])) {
-
+			if (inputs[0].equals(codes[0]) && inputs[1].equals(codes[1]) && inputs[2].equals(codes[2]) && inputs[3].equals(codes[3])) {
+				
 							System.out.println("Je hebt gewonnen geluksbal, volgende keer verlies je");
 							break;
-						}
-					}
-				}
-
 			}
 			
 			if (ronde==10){
 				System.out.println("Ik wist wel dat je ging verliezen, volgende keer beter.");
 			}
-
-			
-
 		}
 		sc.close();
 	}
