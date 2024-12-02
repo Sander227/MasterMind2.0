@@ -1,4 +1,4 @@
-package masterMind2_0;
+package opdrachtenBasisprogrammeren;
 
 import java.util.ArrayList;
 
