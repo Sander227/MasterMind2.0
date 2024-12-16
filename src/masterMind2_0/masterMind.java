@@ -11,7 +11,6 @@ public class masterMind {
 	private static final String VERKEERDE_PLEK = "Wit ";
 
 	public static void main(String[] args) {
-
 		Random random = new Random();
 
 		String[] kleuren = { "rood", "oranje", "geel", "groen", "blauw", "paars" };
@@ -71,3 +70,6 @@ public class masterMind {
 		//
 	}
 }
+
+
+
