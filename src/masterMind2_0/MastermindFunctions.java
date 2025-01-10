@@ -18,8 +18,16 @@ public class MastermindFunctions {
 		return codes;
 	}
 	
+	public String[] kleurenAanmaken() {
+		for (int t = 0; t < codes.length; t++) {
+			codes[t] = sc.next();
+			
+		}
+		return kleuren;
+	}
+	
 	public String[] input(int teller) {
-		System.out.println("\nGok " + teller);
+		System.out.println("\nGok " + teller +": ");
 		String[] pogingen = new String[4];
 		for (int x = 0; x < pogingen.length; x++) {
 			pogingen[x] = sc.next();
